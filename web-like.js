@@ -17,10 +17,6 @@ var likeElement = '<svg xmlns="http://www.w3.org/2000/svg" id="WebLikeButton" da
 appendHtml(document.body, likeElement);
 var button = document.getElementById("WebLikeButton")
 
-//Add Some CSS Styles
-
-
-
 //Initialize
   chrome.storage.sync.get("liked", function(result){
      liked_list = result.liked;
