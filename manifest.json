@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "WebLike",
+  "description": "This extension lets you like things on the web and saves them for you. [page suggestions coming soon]",
+  "version": "1.1",
+  "permissions":["storage", "tabs", "webNavigation"],
+  "icons": { "16": "heart_16.png",
+           "48": "heart_48.png",
+          "128": "heart_128.png" },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false 
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["web-like.js"]
+    }
+  ]  
+}
